@@ -12,6 +12,12 @@ $containerwidth: 1140px;
 
 @mixin heading {
     font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+}
+
+@mixin smallheading {
+    font-weight: bold;
     font-size: 36px;
     line-height: 43px;
 }
@@ -26,12 +32,6 @@ $containerwidth: 1140px;
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
-}
-
-@mixin smallesttext {
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
 }
 
 * {
@@ -52,41 +52,55 @@ html, body {
   padding-left: $containerPadding;
 }
 
-.header {
-    background-color: $boldcolor;
-    padding-top: 15px;
-    padding-bottom: 15px;
+// .header {
+//     background-color: $boldcolor;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
 
-    nav {
-        display: flex;
-        justify-content: space-between;
+//     nav {
+//         display: flex;
+//         justify-content: space-between;
 
-        a {
-            text-decoration: none;
+//         a {
+//             text-decoration: none;
             
-            div {
-                width: 40px;
-                height: 40px;
-                background-color: #fff;
-            }
-        }
-    }
-}
+//             div {
+//                 width: 40px;
+//                 height: 40px;
+//                 background-color: #fff;
+//             }
+//         }
+//     }
+// }
 
 .intro {
     background-color: $lightcolor;
-    padding-top: 138px;
-    padding-bottom: 164px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 39.8%;
+        margin-right: 16.1%;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
     &__text {
         margin-left: 2.2%;
         padding-left: 24px;
-        border-left: 9px solid $lightredcolor;
         color: #FFFFFF;
+        
 
         h2 {
             @include heading();
             margin-bottom: 4px;
+            display: flex;
 
             img {
                 width: 40px;
@@ -101,11 +115,11 @@ html, body {
         }
 
         p {
-            @include smalltext();
+            @include paragraph();
             margin-bottom: 48px;
 
             span {
-                @include smalltext();
+                @include paragraph();
                 color: #E5F94D;
             }
         }
@@ -117,7 +131,7 @@ html, body {
         align-items: flex-start;
 
         span {
-        @include smallesttext();
+        // @include smallesttext();
         margin-bottom: 11px;
         }
 
@@ -138,17 +152,18 @@ html, body {
     text-align: center;
 
     h2 {
-        @include paragraph();
+        @include smallheading();
         margin-bottom: 48px;
         color: $redcolor;
     }
 
     &__text {
-        @include smalltext();
+        @include paragraph();
         margin-bottom: 70px;
         font-weight: normal;
 
         &--bold {
+            @include paragraph();
             font-weight: bold;
             margin-bottom: 70px;
         }
@@ -182,6 +197,7 @@ html, body {
 
         ul {
             li {
+                @include smalltext();
                 text-align: left;
                 line-height: 40px;
                 font-weight: normal;
@@ -197,8 +213,8 @@ html, body {
 .link {
     padding-top: 42px;
     padding-bottom: 75px;
-    background-color: #C4C4C4;
-    color: #000;
+    background-color: $lightcolor;
+    color: #fff;
 
     h2 {
         @include paragraph();
@@ -212,8 +228,8 @@ html, body {
         text-align: center;
     }
 
-    &__wrap {
-    }
+    // &__wrap {
+    // }
 
     &__cards {
         display: flex;
@@ -281,3 +297,6 @@ html, body {
         }
     }
 }
+
+
+@import "block/meadia";

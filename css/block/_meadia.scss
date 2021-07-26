@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .intro {
+        &__img {
+            display: none;
+        }
+    }
+
+    .link {
+        &__cards {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            figure {
+
+                &:nth-child(-n+5) {
+                    margin-bottom: 30px;
+                }
+
+                &:not(:nth-child(3n+3)) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
