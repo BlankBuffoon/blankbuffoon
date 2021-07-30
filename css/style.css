@@ -498,9 +498,6 @@ html, body {
 }
 
 @media (max-width: 1143px) {
-  .projects p {
-    width: 100%;
-  }
   .projects__cards figure:not(:nth-child(2n)) {
     margin-right: 16px;
   }
@@ -549,6 +546,9 @@ html, body {
   .skills__progress .skills__js div {
     width: 200px;
     margin-right: 15px;
+  }
+  .projects p {
+    width: 100%;
   }
   .projects__cards {
     -webkit-box-orient: vertical;
