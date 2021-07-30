@@ -9,6 +9,10 @@ $redcolor: #DB2E5C;
 $containerPadding: 16px;
 $containerwidth: 1140px;
 
+$htmlprogress: 70%;
+$cssprogress: 60%;
+$jsprogress: 10%;
+
 
 @mixin heading {
     font-weight: bold;
@@ -147,91 +151,210 @@ html, body {
 }
 
 .about {
-    padding-top: 70px;
-    padding-bottom: 130px;
-    text-align: center;
+    padding-top: 112px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 
     h2 {
         @include smallheading();
-        margin-bottom: 48px;
-        color: $redcolor;
+        color: #DB2E5C;
+        margin-bottom: 32px;
+    }
+
+    p {
+        @include paragraph();
+        font-weight: normal;
+        margin-bottom: 32px;
     }
 
     &__text {
-        @include paragraph();
-        margin-bottom: 70px;
-        font-weight: normal;
+        flex-basis: 0;
+        flex-grow: 1;
+        margin-right: 30px;
+        
+        .text__wrap {
+            display: flex;
+            justify-content: space-between;
 
-        &--bold {
-            @include paragraph();
-            font-weight: bold;
-            margin-bottom: 70px;
+            p {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                @include smalltext();
+                font-weight: normal;
+                
+                span {
+                    color: #767575;
+                    margin-bottom: 10px;
+                }
+            }
         }
+    }
+
+    img {
+        flex-basis: 0;
+        flex-grow: 1;
+        width: 48.6%;
+        height: 42.8%;
+    }
+}
+
+.skills {
+    padding-top: 90px;
+
+    h2 {
+        @include smallheading();
+        color: #DB2E5C;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    hr {
+        width: 100vw;
+        border: 1px solid;
+        margin-bottom: 48px;
+        color: rgba(0, 0, 0, 0.2);
     }
 
     &__wrap {
         display: flex;
-        justify-content: center;
-        margin-bottom: 70px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__list {
+        flex-basis: 0;
+        flex-grow: 1;
+
+        h2 {
+            @include paragraph();
+            text-align: left;
+            color: #000;
+        }
 
         p {
-            text-align: left;
             display: flex;
             flex-direction: column;
+            margin-bottom: 20px;
             @include smalltext();
-            font-weight: normal;
-            
+
             span {
-                color: #767575;
-                margin-bottom: 10px;
+                font-weight: normal;
+                margin-top: 12px;
+            }
+        }
+    }
+
+    &__progress {
+        align-items: center;
+        flex-basis: 0;
+        flex-grow: 1;
+
+        .progressBar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 54px;
             }
 
-            &:first-child {
-                margin-right: 15.7%;
-            }
-
-            &:last-child {
-                margin-left: 13.1%;
+            h3 {
+                &:first-child {
+                    width: 68px;
+                }
             }
         }
 
-        ul {
-            li {
-                @include smalltext();
-                text-align: left;
-                line-height: 40px;
-                font-weight: normal;
+        .skills__html {
+            div {
+                width: 64.8%;
+                height: 15px;
+                background: #FFFFFF;
+                border: 1px solid #C4C4C4;
+                border-radius: 20px;
+                
+                div {
+                    height: 100%;
+                    width: $htmlprogress;
+                    background: #DB2E5C;
+                    border: none;
+                    border-radius: 20px;
+                }
             }
+        }
 
-            &:not(:last-child) {
-                margin-right: 100px;
+        .skills__css {
+            div {
+                width: 64.8%;
+                height: 15px;
+                background: #FFFFFF;
+                border: 1px solid #C4C4C4;
+                border-radius: 20px;
+                
+                div {
+                    height: 100%;
+                    width: $cssprogress;
+                    background: #DB2E5C;
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .skills__js {
+            div {
+                width: 64.8%;
+                height: 15px;
+                background: #FFFFFF;
+                border: 1px solid #C4C4C4;
+                border-radius: 20px;
+                
+                div {
+                    height: 100%;
+                    width: $jsprogress;
+                    background: #DB2E5C;
+                    border: none;
+                    border-radius: 20px;
+                }
             }
         }
     }
 }
 
-.link {
-    padding-top: 42px;
-    padding-bottom: 75px;
-    background-color: $lightcolor;
-    color: #fff;
+
+
+.projects {
+    padding-top: 90px;
 
     h2 {
-        @include paragraph();
-        margin-bottom: 24px;
+        @include smallheading();
+        color: #DB2E5C;
         text-align: center;
+        margin-bottom: 24px;
+    }
+
+    hr {
+        width: 100vw;
+        border: 1px solid;
+        margin-bottom: 32px;
+        color: rgba(0, 0, 0, 0.2);
     }
 
     p {
         @include smalltext();
-        margin-bottom: 48px;
         text-align: center;
+        font-weight: normal;
+        width: 42.1%;
+        margin: 0 auto;
     }
 
-    // &__wrap {
-    // }
-
     &__cards {
+        padding-top: 48px;
+        padding-bottom: 76px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -240,16 +363,19 @@ html, body {
             width: 360px;
             height: 280px;
             padding: 20px;
-            background-color: red;
+            border-radius: 1.5%;
+            background-color: $lightcolor;
+            
             display: flex;
             justify-content: center;
             align-items: center;
 
             figcaption {
                 transition: .5s;
+                
                 a {
                     text-decoration: none;
-                    color: white;
+                    color: #000;
                 }
             }
 
@@ -266,6 +392,10 @@ html, body {
             }
         }
     }
+}
+
+.contacts {
+    display: none;
 }
 
 .footer {
