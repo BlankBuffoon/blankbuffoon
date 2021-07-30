@@ -498,6 +498,9 @@ html, body {
 }
 
 @media (max-width: 1143px) {
+  .projects p {
+    width: 100%;
+  }
   .projects__cards figure:not(:nth-child(2n)) {
     margin-right: 16px;
   }

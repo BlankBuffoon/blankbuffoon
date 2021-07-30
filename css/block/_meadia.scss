@@ -48,6 +48,11 @@
 
 @media (max-width: 1143px) {
     .projects {
+
+        p {
+            width: 100%;
+        }
+        
         &__cards {
             figure {
                 &:not(:nth-child(2n)) {
@@ -125,7 +130,7 @@
 
             figure {
                 width: 360px - $containerPadding * 2;
-                
+
                 &:not(:nth-child(2n)) {
                     margin-right: 0px;
                 }
