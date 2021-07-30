@@ -16,6 +16,67 @@ html, body {
   padding-left: 16px;
 }
 
+.upbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  background: #7633A6;
+  border-radius: 50%;
+}
+
+.upbutton a {
+  text-decoration: none;
+  color: white;
+}
+
+.upbutton i {
+  font-size: 24px;
+}
+
+.header {
+  background-color: #492066;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header nav ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
 .intro {
   background-color: #AD4BF2;
   min-height: 100vh;
@@ -208,7 +269,7 @@ html, body {
 }
 
 .skills hr {
-  width: 100vw;
+  width: 100%;
   border: 1px solid;
   margin-bottom: 48px;
   color: rgba(0, 0, 0, 0.1);
@@ -356,7 +417,7 @@ html, body {
 }
 
 .projects hr {
-  width: 100vw;
+  width: 100%;
   border: 1px solid;
   margin-bottom: 32px;
   color: rgba(0, 0, 0, 0.1);

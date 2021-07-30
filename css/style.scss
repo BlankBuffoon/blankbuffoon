@@ -56,26 +56,56 @@ html, body {
   padding-left: $containerPadding;
 }
 
-// .header {
-//     background-color: $boldcolor;
-//     padding-top: 15px;
-//     padding-bottom: 15px;
+.upbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    background: #7633A6;
+    border-radius: 50%;
 
-//     nav {
-//         display: flex;
-//         justify-content: space-between;
+    a {
+        text-decoration: none;
+        color: white;
+    }
 
-//         a {
-//             text-decoration: none;
-            
-//             div {
-//                 width: 40px;
-//                 height: 40px;
-//                 background-color: #fff;
-//             }
-//         }
-//     }
-// }
+    i {
+        font-size: 24px;
+    }
+}
+
+.header {
+    background-color: $boldcolor;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
 
 .intro {
     background-color: $lightcolor;
@@ -212,7 +242,7 @@ html, body {
     }
 
     hr {
-        width: 100vw;
+        width: 100%;
         border: 1px solid;
         margin-bottom: 48px;
         color: rgba(0, 0, 0, 0.1);
@@ -338,7 +368,7 @@ html, body {
     }
 
     hr {
-        width: 100vw;
+        width: 100%;
         border: 1px solid;
         margin-bottom: 32px;
         color: rgba(0, 0, 0, 0.1);
