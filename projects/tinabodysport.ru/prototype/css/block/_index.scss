@@ -1,0 +1,484 @@
+$header-height: 80px;
+
+
+@mixin bigheading ($font-weight: bold, $color: #000000) {
+    font-weight: $font-weight;
+    font-size: 64px;
+    line-height: 76px;
+    color: $color;
+}
+
+@mixin heading ($font-weight: bold, $color: #000000) {
+    font-weight: $font-weight;
+    font-size: 36px;
+    line-height: 43px;
+    color: $color;
+}
+
+@mixin paragraph ($font-weight: bold, $color: #000000) {
+    font-weight: $font-weight;
+    font-size: 24px;
+    line-height: 28px;
+    color: $color;
+}
+
+@mixin smallparagraph ($font-weight: bold, $color: #000000) {
+    font-weight: $font-weight;
+    font-size: 18px;
+    line-height: 21px;
+    color: $color;
+}
+
+.header {
+    background: #ffffff;
+    height: $header-height;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 80px;
+    }
+
+    &__button {
+        border: none;
+        background: none;
+
+        img {
+            width: 40px;
+        }
+    }
+}
+
+
+
+.intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/introbgi.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - #{$header-height});
+
+    &__action {
+        height: calc(100vh - #{$header-height});
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            @include bigheading(bold, #ffffff);
+            padding-bottom: 2px;
+        }
+
+        p {
+            @include paragraph(300, #ffffff);
+            padding-bottom: 28px;
+        }
+
+        span {
+            @include smallparagraph(300, #ffffff);
+            padding-bottom: 28px;
+            width: 26.3%;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 0;
+        }
+
+        a {
+            padding: 15px 24px;
+            text-decoration: none;
+            background: #FE71A8;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+            color: #ffffff;
+        }
+    }
+}
+
+
+
+.gradient {
+    background: linear-gradient(298.3deg, rgba(175, 81, 214, 0.15) 71.17%, rgba(175, 81, 214, 0) 100%);
+}
+
+
+
+.about {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        video {
+            width: 460px;
+        }
+    }
+
+    &__desc {
+        padding-right: 128px;
+
+        h2 {
+            @include heading(bold, #000);
+            margin-bottom: 24px;
+        }
+
+        p {
+            @include paragraph(300, #000);
+        }
+    }
+}
+
+
+
+.features {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 70px;
+    }
+
+    &__desc {
+        padding-right: 84px;
+
+        h2 {
+            @include heading(bold, #000);
+            margin-bottom: 24px;
+        }
+
+        p {
+            @include paragraph(300, #000);
+            padding-bottom: 24px;
+        }
+
+        p:last-child {
+            padding-bottom: 0;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    button {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33px;
+        color: #fff;
+        border: none;
+        background: none;
+        padding: 12px 74px;
+        background: #FE71A8;
+        border-radius: 10px;
+    }
+}
+
+
+
+.direction {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &__desc {
+        display: flex;
+        padding-bottom: 60px;
+
+        h2 {
+            @include heading(bold, #000);
+            text-align: justify;
+            width: 25%;
+            margin-right: 106px;
+
+            span {
+                color: #E44071;
+            }
+        }
+
+        p {
+            @include paragraph(300, #000);
+        }
+    }
+
+    &__cards {
+        display: flex;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: calc(1140px / 5);
+            height: 200px;
+            cursor: pointer;
+
+            padding: 20px 15px 10px;
+
+            h2 {
+                @include paragraph(bold, #ffffff);
+            }
+
+            span {
+                font-size: 96px;
+                line-height: 70px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+        }
+
+        .card:first-child {
+            background: #751751;
+        }
+
+        .card:nth-child(2) {
+            background: #F77BC7;
+        }
+
+        .card:nth-child(3) {
+            background: #F531AA;
+        }
+
+        .card:nth-child(4) {
+            background: #754A65;
+        }
+
+        .card:last-child {
+            background: #C22786;
+        }
+    }
+}
+
+
+
+.action {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url('../img/action.png');
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            @include heading(bold, #000);
+            margin-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 33px;
+            color: #fff;
+            padding: 12px 74px;
+            background: #FE71A8;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
+.form {
+    padding-top: 70px;
+    padding-bottom: 90px;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 57px;
+            color: #000000;
+            margin-bottom: 80px;
+        }
+
+        form {
+            width: 57%;
+            display: flex;
+            flex-direction: column;
+
+            .form__radio {
+                flex-direction: row;
+                margin-bottom: 15px;
+            }
+
+            label, p {
+                @include smallparagraph(300, #000000);
+            }
+
+            label#gender {
+                margin-bottom: 0;
+                margin-right: 26px;
+            }
+
+            input:not([type=submit]) {
+                border: 1px solid #3E1A26;
+                border-radius: 5px;
+                width: 100%;
+                height: 35px;
+                padding: 10px;
+            }
+
+            input[type=radio] {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+
+            textarea {
+                padding: 10px;
+                height: 200px;
+                width: 100%;
+                margin-bottom: 64px;
+                resize: none;
+            }
+
+            input[type=submit] {
+                align-self: center;
+                padding: 12px 56px;
+                width: 280px;
+                border: none;
+                background: #FF69A4;
+                border-radius: 10px;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 33px;
+                color: #ffffff;
+                margin-bottom: 18px;
+
+                filter: drop-shadow(5px 8px 15px rgba(0, 0, 0, 0.25));
+            }
+
+            p:last-child {
+                font-size: 16px;
+                width: 300px;
+                align-self: center;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+.footer {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    background: #292929;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 44px;
+    }
+
+    &__buttons {
+        a {
+            width: 262px;
+            padding: 9px 0;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: #FFFFFF;
+
+            background: #FAA04F;
+            border-radius: 5px;
+
+            &:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            .break {
+                width: 100%;
+            }
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #ffffff;
+
+                    i {
+                        font-size: 40px;
+                        color: #ffffff;
+                        margin-right: 16px;
+                    }
+
+                    p {
+                        @include smallparagraph(300, #ffffff);
+                    }
+                }
+
+                &:nth-child(3n+1) {
+                    margin-right: 42px;
+                }
+
+                &:first-child, &:nth-child(2) {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        // .footer__group {
+        //     display: flex;
+        //     align-items: center;
+
+        //     &:not(:last-child) {
+        //         margin-bottom: 14px;
+        //     }
+
+        //     i {
+        //         font-size: 40px;
+        //         color: #ffffff;
+        //         margin-right: 16px;
+        //     }
+
+        //     p:not(:last-child) {
+        //         margin-right: 42px;
+        //     }
+        // }
+    }
+
+    &__copy {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            @include smallparagraph(300, #ffffff);
+        }
+    }
+}

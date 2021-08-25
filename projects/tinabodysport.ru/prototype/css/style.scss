@@ -1,0 +1,25 @@
+$max-width: 1140px;
+$side-padding: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: $max-width + ($side-padding * 2);
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+    margin: 0 auto;
+}
+
+@import "block/index";
