@@ -1,5 +1,13 @@
 $header-height: 80px;
 
+// Colors
+
+$introbuttoncolor: #8E6262;
+$blackcolor: #000000;
+$whitecolor: #ffffff;
+$buttoncolor: #FF69A4;
+$formbg: #EAEAEA;
+
 
 @mixin bigheading ($font-weight: bold, $color: #000000) {
     font-weight: $font-weight;
@@ -89,22 +97,22 @@ $header-height: 80px;
         }
 
         a {
-            padding: 15px 24px;
+            padding: 10px 80px;
             text-decoration: none;
-            background: #FE71A8;
-            border-radius: 10px;
+            background: $introbuttoncolor;
+            border-radius: 3px;
             font-weight: 500;
             font-size: 32px;
             line-height: 38px;
-            color: #ffffff;
+            color: $whitecolor;
         }
     }
 }
 
 
 
-.gradient {
-    background: linear-gradient(298.3deg, rgba(175, 81, 214, 0.15) 71.17%, rgba(175, 81, 214, 0) 100%);
+.background {
+    background-color: $blackcolor;
 }
 
 
@@ -127,12 +135,12 @@ $header-height: 80px;
         padding-right: 128px;
 
         h2 {
-            @include heading(bold, #000);
+            @include heading(bold, $whitecolor);
             margin-bottom: 24px;
         }
 
         p {
-            @include paragraph(300, #000);
+            @include paragraph(300, $whitecolor);
         }
     }
 }
@@ -150,19 +158,18 @@ $header-height: 80px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 70px;
     }
 
     &__desc {
         padding-right: 84px;
 
         h2 {
-            @include heading(bold, #000);
+            @include heading(bold, $whitecolor);
             margin-bottom: 24px;
         }
 
         p {
-            @include paragraph(300, #000);
+            @include paragraph(300, $whitecolor);
             padding-bottom: 24px;
         }
 
@@ -174,17 +181,118 @@ $header-height: 80px;
             }
         }
     }
+}
 
-    button {
-        font-weight: bold;
-        font-size: 28px;
-        line-height: 33px;
-        color: #fff;
-        border: none;
-        background: none;
-        padding: 12px 74px;
-        background: #FE71A8;
-        border-radius: 10px;
+
+
+.featureslist {
+    padding-bottom: 165px;
+    position: relative;
+
+    &__bg {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        overflow: hidden;
+
+        p:nth-child(1) {
+            font-weight: 500;
+            font-size: 72px;
+            line-height: 85px;
+            color: transparent;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: rgba(255, 255, 255, 0.12);
+        }
+
+        p:nth-child(2) {
+            font-weight: 500;
+            font-size: 300px;
+            line-height: 213px;
+            color: transparent;
+            -webkit-text-stroke-width: 6px;
+            -webkit-text-stroke-color: rgba(255, 255, 255, 0.13);
+        }
+
+        p:nth-child(3) {
+            font-weight: 500;
+            font-size: 72px;
+            line-height: 85px;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgba(255, 255, 255, 0.11);
+        }
+    }
+
+    &__wrap {
+        margin-left: 33.3333%;
+        display: flex;
+        position: relative;
+        
+        ul {
+            list-style-type: none;
+            z-index: 2;
+            // border-left: 15px solid #fff;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 50px;
+                }
+
+                &:first-child > .featurelist__circle {
+                    background: #FC51A5;
+                }
+
+                &:nth-child(2) > .featurelist__circle {
+                    background: #E64995;
+                }
+
+                &:nth-child(3) > .featurelist__circle {
+                    background: #D9458D;
+                }
+
+                &:nth-child(4) > .featurelist__circle {
+                    background: #BF3D7C;
+                }
+
+                &:last-child > .featurelist__circle {
+                    background: #912F5E;
+                }
+
+                .featurelist__circle {
+                    width: 85px;
+                    height: 85px;
+                    border-radius: 50px;
+                    margin-right: 25px;
+                }
+
+                p {
+                    font-size: 28px;
+                    line-height: 33px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        &::before {
+            position: absolute;
+            height: 670px;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin-left: 40px;
+            border-left: 5px solid #6E0039;
+            z-index: 0;
+        }
     }
 }
 
@@ -217,13 +325,19 @@ $header-height: 80px;
     &__cards {
         display: flex;
 
+        a {
+            text-decoration: none;
+        }
+
         .card {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: calc(1140px / 5);
             height: 200px;
             cursor: pointer;
+            z-index: 2;
 
             padding: 20px 15px 10px;
 
@@ -237,25 +351,48 @@ $header-height: 80px;
                 font-weight: bold;
                 color: #ffffff;
             }
+
+            &::before {
+                position: absolute;
+                content: "Подробнее";
+                color: transparent;
+                // padding-top: 50%;
+                text-align: center;
+                font-size: 24px;
+                line-height: 200px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 0px;
+                transition: 0.8s;
+            }
+
+            &:hover {
+                &::before {
+                    height: 100%;
+                    color: white;
+                }
+                
+            }
         }
 
-        .card:first-child {
+        a:first-child > .card, a:first-child > .card::before {
             background: #751751;
         }
 
-        .card:nth-child(2) {
+        a:nth-child(2) > .card, a:nth-child(2) > .card::before  {
             background: #F77BC7;
         }
 
-        .card:nth-child(3) {
+        a:nth-child(3) > .card, a:nth-child(3) > .card::before {
             background: #F531AA;
         }
 
-        .card:nth-child(4) {
+        a:nth-child(4) > .card, a:nth-child(4) > .card::before {
             background: #754A65;
         }
 
-        .card:last-child {
+        a:last-child > .card, a:last-child > .card::before {
             background: #C22786;
         }
     }
@@ -266,7 +403,7 @@ $header-height: 80px;
 .action {
     padding-top: 70px;
     padding-bottom: 70px;
-    background-image: url('../img/action.png');
+    background-image: url('../img/action_pattern.png');
 
     &__wrap {
         display: flex;
@@ -284,9 +421,8 @@ $header-height: 80px;
             font-size: 28px;
             line-height: 33px;
             color: #fff;
-            padding: 12px 74px;
-            background: #FE71A8;
-            border-radius: 10px;
+            padding: 11px 35px;
+            background: $buttoncolor;
         }
     }
 }
@@ -296,6 +432,7 @@ $header-height: 80px;
 .form {
     padding-top: 70px;
     padding-bottom: 90px;
+    background: $formbg;
 
     &__wrap {
         display: flex;
@@ -329,6 +466,10 @@ $header-height: 80px;
                 margin-right: 26px;
             }
 
+            input {
+                background: $formbg;
+            }
+
             input:not([type=submit]) {
                 border: 1px solid #3E1A26;
                 border-radius: 5px;
@@ -349,6 +490,7 @@ $header-height: 80px;
                 width: 100%;
                 margin-bottom: 64px;
                 resize: none;
+                background: $formbg;
             }
 
             input[type=submit] {
@@ -356,13 +498,14 @@ $header-height: 80px;
                 padding: 12px 56px;
                 width: 280px;
                 border: none;
-                background: #FF69A4;
-                border-radius: 10px;
+                background: $buttoncolor;
+                border-radius: 5px;
                 font-weight: 500;
                 font-size: 28px;
                 line-height: 33px;
                 color: #ffffff;
                 margin-bottom: 18px;
+                cursor: pointer;
 
                 filter: drop-shadow(5px 8px 15px rgba(0, 0, 0, 0.25));
             }
