@@ -234,7 +234,6 @@ button {
   bottom: 0;
   right: 0;
   z-index: 1;
-  overflow: hidden;
 }
 
 .featureslist__bg p:nth-child(1) {
@@ -247,9 +246,13 @@ button {
 }
 
 .featureslist__bg p:nth-child(2) {
+  z-index: 10;
+  vertical-align: middle;
+  margin-left: -80px;
   font-weight: 500;
   font-size: 300px;
-  line-height: 213px;
+  line-height: 190px;
+  padding-bottom: 40px;
   color: transparent;
   -webkit-text-stroke-width: 6px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.13);
