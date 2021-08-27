@@ -138,11 +138,11 @@ button {
 }
 
 .about__wrap video {
-  width: 460px;
+  width: 550px;
 }
 
 .about__desc {
-  padding-right: 128px;
+  padding-right: 64px;
 }
 
 .about__desc h2 {

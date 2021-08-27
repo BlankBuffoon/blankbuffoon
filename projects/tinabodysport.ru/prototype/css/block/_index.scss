@@ -127,12 +127,12 @@ $formbg: #EAEAEA;
         justify-content: space-between;
 
         video {
-            width: 460px;
+            width: 550px;
         }
     }
 
     &__desc {
-        padding-right: 128px;
+        padding-right: 64px;
 
         h2 {
             @include heading(bold, $whitecolor);
