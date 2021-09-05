@@ -1,5 +1,5 @@
 $max-width: 1140px;
-$side-padding: 20px;
+$side-padding: 16px;
 
 * {
     margin: 0;
@@ -17,10 +17,11 @@ button {
 
 .container {
     max-width: $max-width + ($side-padding * 2);
-    padding-left: $side-padding;
-    padding-right: $side-padding;
     margin: 0 auto;
+    padding-right: $side-padding;
+    padding-left: $side-padding;
 }
 
 @import "block/index";
 @import "block/animation";
+@import "block/adaptive";

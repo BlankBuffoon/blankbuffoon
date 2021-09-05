@@ -37,6 +37,17 @@ $formbg: #EAEAEA;
     color: $color;
 }
 
+@mixin button ($font-weight, $font-size, $line-height, $font-color, $padding-vertical, $padding-horizontal, $border-radius, $bg-color) {
+    text-decoration: none;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $font-color;
+    padding: $padding-vertical $padding-horizontal;
+    border-radius: $border-radius;
+    background: $bg-color;
+}
+
 .header {
     background: #ffffff;
     height: $header-height;
@@ -90,21 +101,14 @@ $formbg: #EAEAEA;
         span {
             @include smallparagraph(300, #ffffff);
             padding-bottom: 28px;
-            width: 26.3%;
+            width: 300px;
             text-align: center;
             padding-top: 20px;
             padding-bottom: 0;
         }
 
         a {
-            padding: 10px 80px;
-            text-decoration: none;
-            background: $introbuttoncolor;
-            border-radius: 3px;
-            font-weight: 500;
-            font-size: 32px;
-            line-height: 38px;
-            color: $whitecolor;
+            @include button(500, 32px, 38px, $whitecolor, 10px, 80px, 3px, $introbuttoncolor);
         }
     }
 }
@@ -141,6 +145,10 @@ $formbg: #EAEAEA;
 
         p {
             @include paragraph(300, $whitecolor);
+
+            span {
+                font-weight: bold;
+            }
         }
     }
 }
@@ -273,8 +281,8 @@ $formbg: #EAEAEA;
                 }
 
                 .featurelist__circle {
-                    width: 85px;
-                    height: 85px;
+                    min-width: 85px;
+                    min-height: 85px;
                     border-radius: 50px;
                     margin-right: 25px;
                 }
@@ -316,7 +324,7 @@ $formbg: #EAEAEA;
             @include heading(bold, #000);
             text-align: justify;
             width: 25%;
-            margin-right: 106px;
+            margin-right: 9.3%;
 
             span {
                 color: #E44071;
@@ -330,17 +338,26 @@ $formbg: #EAEAEA;
 
     &__cards {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // width: 100%;
 
         a {
+            width: calc(1140px / 5);
+            flex-grow: 2;
             text-decoration: none;
+            flex-wrap: wrap;
+            // width: 20%;
         }
 
         .card {
             position: relative;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
             justify-content: space-between;
-            width: calc(1140px / 5);
+            // width: calc(1140px / 5);
+            width: 100%;
             height: 200px;
             cursor: pointer;
             z-index: 2;
@@ -356,29 +373,6 @@ $formbg: #EAEAEA;
                 line-height: 70px;
                 font-weight: bold;
                 color: #ffffff;
-            }
-
-            &::before {
-                position: absolute;
-                content: "Подробнее";
-                color: transparent;
-                // padding-top: 50%;
-                text-align: center;
-                font-size: 24px;
-                line-height: 200px;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 0px;
-                transition: 0.8s;
-            }
-
-            &:hover {
-                &::before {
-                    height: 100%;
-                    color: white;
-                }
-                
             }
         }
 
@@ -419,16 +413,11 @@ $formbg: #EAEAEA;
         h2 {
             @include heading(bold, #000);
             margin-bottom: 40px;
+            text-align: center;
         }
 
         a {
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 28px;
-            line-height: 33px;
-            color: #fff;
-            padding: 11px 35px;
-            background: $buttoncolor;
+            @include button(bold, 28px, 33px, $whitecolor, 11px, 35px, 0px, $buttoncolor);
         }
     }
 }
@@ -451,6 +440,7 @@ $formbg: #EAEAEA;
             line-height: 57px;
             color: #000000;
             margin-bottom: 80px;
+            text-align: center;
         }
 
         form {
@@ -500,16 +490,10 @@ $formbg: #EAEAEA;
             }
 
             input[type=submit] {
+                @include button(500, 28px, 33px, $whitecolor, 12px, 56px, 3px, $buttoncolor);
                 align-self: center;
-                padding: 12px 56px;
                 width: 280px;
                 border: none;
-                background: $buttoncolor;
-                border-radius: 5px;
-                font-weight: 500;
-                font-size: 28px;
-                line-height: 33px;
-                color: #ffffff;
                 margin-bottom: 18px;
                 cursor: pointer;
 
@@ -542,17 +526,10 @@ $formbg: #EAEAEA;
 
     &__buttons {
         a {
+            @include button(500, 18px, 21px, $whitecolor, 9px, 0px, 5px, #FAA04F);
             width: 262px;
-            padding: 9px 0;
             display: inline-block;
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 21px;
             text-align: center;
-            color: #FFFFFF;
-
-            background: #FAA04F;
-            border-radius: 5px;
 
             &:first-child {
                 margin-bottom: 10px;
@@ -601,25 +578,6 @@ $formbg: #EAEAEA;
                 }
             }
         }
-
-        // .footer__group {
-        //     display: flex;
-        //     align-items: center;
-
-        //     &:not(:last-child) {
-        //         margin-bottom: 14px;
-        //     }
-
-        //     i {
-        //         font-size: 40px;
-        //         color: #ffffff;
-        //         margin-right: 16px;
-        //     }
-
-        //     p:not(:last-child) {
-        //         margin-right: 42px;
-        //     }
-        // }
     }
 
     &__copy {
@@ -628,6 +586,7 @@ $formbg: #EAEAEA;
 
         p {
             @include smallparagraph(300, #ffffff);
+            text-align: center;
         }
     }
 }
