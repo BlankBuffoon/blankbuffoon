@@ -84,15 +84,24 @@ html, body {
     padding-top: 15px;
     padding-bottom: 15px;
 
-    nav {
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    &__navmenu {
         display: flex;
         justify-content: space-between;
+    }
 
-        a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
+    &__button {
+        border: none;
+        background: none;
+    }
+
+    &__hamburger {
+        display: none;
 
         ul {
             list-style-type: none;
@@ -102,9 +111,31 @@ html, body {
                 &:not(:last-child) {
                     margin-right: 30px;
                 }
-            }
+            }   
         }
     }
+
+    // nav {
+    //     display: flex;
+    //     justify-content: space-between;
+
+    //     a {
+    //         text-decoration: none;
+    //         color: white;
+    //         font-weight: bold;
+    //     }
+
+    //     ul {
+    //         list-style-type: none;
+    //         display: flex;
+
+    //         li {
+    //             &:not(:last-child) {
+    //                 margin-right: 30px;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 .intro {
