@@ -1,7 +1,6 @@
 $(function () {
     var button = $('#main button.continuebutton');
     var main = $('#main');
-    var video = $('#bgVideo');
     var clickCounter = 0;
     var clickCounterStr = 'count' + clickCounter.toString();
 
@@ -14,7 +13,6 @@ $(function () {
         main.addClass(clickCounterStr);
         if (clickCounter >= 12) {
             button.addClass('active')
-            video.addClass('active')
         }
         e.preventDefault();
     })

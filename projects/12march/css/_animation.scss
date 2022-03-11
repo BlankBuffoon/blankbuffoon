@@ -128,19 +128,3 @@
     }
   }
 }
-
-#bgVideo.active {
-  display: block;
-  opacity: 35%;
-  transition: opacity 10s;
-}
-
-@keyframes bgShading {
-  0%  {
-    opacity: 0%;
-  }
-
-  100% {
-    opacity: 35%;
-  }
-}
