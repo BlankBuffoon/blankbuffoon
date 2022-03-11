@@ -8,6 +8,41 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.underText {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  color: white;
+}
+.underText img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.underText h1 {
+  font-size: 24px;
+  margin-bottom: 14px;
+  min-width: calc(31.25% - 20px);
+}
+.underText h2 {
+  font-size: 18px;
+  min-width: calc(31.25% - 20px);
+}
+
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
 .main {
   height: 100vh;
   width: 100vw;
@@ -64,6 +99,10 @@ button.active {
 .main.active .subtext::after {
   content: "";
 }
+.main.active.fade {
+  opacity: 0%;
+  transition: opacity 20s;
+}
 .main.active.count1 .maintext::after {
   content: "Ты попалась!";
 }
@@ -86,7 +125,7 @@ button.active {
   content: "За это время...";
 }
 .main.active.count4 .subtext::after {
-  content: "Мы с тобой пережили множетво разных событий. Как хороших, так и не очень.";
+  content: "Мы пережили множеcтво разных событий. Как хороших, так и не очень.";
 }
 .main.active.count5 .maintext::after {
   content: "К сожалению...";
@@ -128,13 +167,22 @@ button.active {
   content: "На последок";
 }
 .main.active.count11 .subtext::after {
-  content: "Я очень надеюсь что ты будешь рядом со мной до самого конца. Я не хочу тебя отпускать. Хочу прожить с тобой всю свою жизнь. Только с тобой... Надеюсь что так и будет. Так что сполне возможно что в следующем году, ты перейдешь по этой ссылке и увидишь что-то новое). Люблю тебя малыш!";
+  content: "Я очень надеюсь что ты будешь рядом со мной до самого конца. Я не хочу тебя отпускать. Хочу прожить с тобой всю свою жизнь. Только с тобой... Надеюсь что так и будет. Так что вполне возможно, что в следующем году ты перейдешь по этой ссылке и увидишь что-то новое). Люблю тебя малыш!";
 }
 .main.active.count12 .maintext::after {
   content: "P.s";
 }
 .main.active.count12 .subtext::after {
-  content: "Я не очень хорошо придумываю текст, но пишу от сердца, так что не смейся с моей манеры речи. Кстати. На сайте тебе пришлось нажать на кнопку 12 раз. Совпадение?";
+  content: "Я не очень хорошо придумываю текст, но пишу от сердца, искренне. Так что не смейся с моей манеры речи, я старался. Кстати. На сайте тебе пришлось нажать на кнопку 12 раз. Совпадение?";
+}
+
+@keyframes mainFade {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

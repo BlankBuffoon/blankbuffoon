@@ -13,6 +13,7 @@ $(function () {
         main.addClass(clickCounterStr);
         if (clickCounter >= 12) {
             button.addClass('active')
+            main.addClass('fade')
         }
         e.preventDefault();
     })
