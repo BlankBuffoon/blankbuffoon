@@ -1,4 +1,12 @@
-### Hi there 👋
+### 
+Hi there 👋
+My name is Alex. I am a frontend developer.
+My specialization is the layout of websites and the development of application logic and web pages.
+
+🌱 I’m currently learning Frontend stack (JS, React, frameworks and other features)
+
+telegram
+@blankbuffoon
 
 <!--
 **BlankBuffoon/blankbuffoon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
