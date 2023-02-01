@@ -4,15 +4,15 @@ My specialization is the layout of websites and the development of application l
 
 🌱 I’m currently learning Frontend and Backend stack (React, Laravel and his features)
 
-### Contacts:
+### 💬 Contacts:
 - [telegram](https://t.me/blankbuffoon)
 - email: aterepin@yandex.ru
 
-### My stack:
-#### Frontend
-HTML, CSS, Sass, JS, JQ, PHP, React (studying), Vue (in future)
-#### Backend
-MySQL, PostgreSQL, Redis, Laravel (studying)
+### 🤔 My stack:
+
+- **Frontend:** HTML, CSS, Sass, JS, JQ, PHP, React (studying), Vue (in future)
+
+- **Backend:** MySQL, PostgreSQL, Redis, Laravel (studying)
 
 #### You can get to know me in more detail [here](https://terepin.ru)
 
