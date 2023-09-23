@@ -50,9 +50,6 @@
     <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a>    
 </p>
 
-
-<h3 align="center">Stats:</h3>
-<p align="center" style="display: flex;">
+<p align="left">
   <img height=200 aligh="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=blankbuffoon&show_icons=true&locale=en&layout=compact&theme=tokyonight#gh-light-mode-only" alt="blankbuffoon" />
-  <img height=200 aligh="center" src="https://github-readme-stats.vercel.app/api?username=blankbuffoon&show_icons=true&locale=en&theme=tokyonight#gh-light-mode-only" alt="blankbuffoon" />
 </p>
