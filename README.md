@@ -9,10 +9,10 @@
 
 <h2 align="center">About me:</h2>
 
-- 🔭 I'm currently working on **terepin.ru 2.0**
+- 🔭 I'm currently working on complex architectural solutions
 
-- 🌱 I’m currently learning **Laravel, Vue, and other Fullstack technologies**
-
+- 🌱 I’m currently learning additional tools for implementing complex business logic and DevOps
+- 
 - 👨‍💻 More information about me is here **[https://terepin.ru/](https://terepin.ru/)**
 
 - 📫 Contact me **[there](https://t.me/blankbuffoon)**
