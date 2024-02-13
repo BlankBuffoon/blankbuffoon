@@ -12,7 +12,7 @@
 - 🔭 I'm currently working on complex architectural solutions
 
 - 🌱 I’m currently learning additional tools for implementing complex business logic and DevOps
-- 
+  
 - 👨‍💻 More information about me is here **[https://terepin.ru/](https://terepin.ru/)**
 
 - 📫 Contact me **[there](https://t.me/blankbuffoon)**
